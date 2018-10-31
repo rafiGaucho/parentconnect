@@ -1,10 +1,11 @@
 import {View,StyleSheet,Alert,TouchableOpacity,TextInput,Text,AsyncStorage} from 'react-native';
 import firebase from 'react-native-firebase';
+import {schoolCode} from './../../schoolCode.js'
 
 export const userLogin=(data1,data2)=>{
 return (dispatch)=>{
       dispatch({type:'loggingEnable'});
-      firebase.database().ref('users').child('009').child(data1.parent.id).set({token:data2})
+      firebase.database().ref('users').child(schoolCode).child(data1.parent.id).set({token:data2})
     }
   }
 

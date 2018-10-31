@@ -41,7 +41,8 @@ handleBackPress = () => {
   return true;
   }
 logout=()=>{
-this.props.logoutUser()
+this.props.logoutUser();
+BackHandler.exitApp();
 }
 
 exit=()=>{BackHandler.exitApp();}
